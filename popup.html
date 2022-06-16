@@ -1,0 +1,134 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Neel Dandiwala" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Chrome Pets</title>
+        <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main-modal">
+            <p id="main-heading" data-title="Chrome Pets">
+                Chrome Pets
+            </p>   
+            
+            <div class="whistle">
+                <input id="enable" type="button" value="🕪">
+            </div>
+            <div id="footer"></div>
+        </div>
+        <script type="text/javascript" src="popup.js"></script>
+    </body>
+</html>
+<style>
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    border-radius: 100px;
+}
+
+.main-modal {
+    height: 150px;
+    width: 90px;
+
+    color: #fff;
+    color: #fff;
+    background: linear-gradient(110deg, #fbbc04 30%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #ea4335 65%, rgba(0, 0, 0, 0) 40%), linear-gradient(110deg, #34a853 40%, #4285f4);
+}
+
+#main-heading {
+    text-align: center;
+    font-size: 20px;
+    /* height: auto; */
+    padding-top: 10px;
+    font-family: 'VT323';
+    font-family: 'Product Sans', sans-serif;
+                                                
+}
+
+#enable {
+   /*do nothing*/
+}
+
+.buttonIcon {
+    position: relative;
+    transform: scale(0.75) translate(-7.5%, 0%);
+    /* left: 50%;
+    top: 50%; */
+    width: 128px;
+    height: 128px;
+    border: 1px solid white;
+}
+
+
+.whistle {
+  font-size: 25px;
+  color: white;
+  height: auto;
+  /* margin: 10px; */
+  font-family: 'VT323';
+  text-align: center;
+  text-transform: uppercase;
+
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  
+  cursor: pointer;
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.whistle:active {
+  top: 8%;
+}
+
+
+.whistle input {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  font-family: 'VT323';
+  font-size: 25px;
+  /* width: 20px; */
+  text-align: center;
+  margin: -20px -20px;
+  line-height: 20px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid white;
+  border-radius: 25px;
+}
+
+.whistle input:enabled {
+    color: #fff;
+}
+
+.whistle input:disabled {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+#footer {
+    position: absolute;
+    background-image: url("static/PopUpFooter.png");
+    background-repeat: repeat-x;
+    left: 0;
+    height: 18px;
+    width: 100%;
+    bottom: -5px;
+}
+
+</style>

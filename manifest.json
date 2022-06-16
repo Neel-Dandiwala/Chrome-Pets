@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Chrome Pets",
+    "description": "A virtual pet for your Google Chrome Browser",
+    "version": "1.0.0",
+    "icons": {
+        "16": "/images/icon16.png",
+        "48": "/images/icon48.png",
+        "128": "/images/icon128.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "/images/icon16-default.png",
+            "48": "/images/icon48-default.png",
+            "128": "/images/icon128-default.png"
+        },
+        "default_title": "Chrome Pets",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "scripting",
+        "storage"
+    ],
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "css": ["main.css"],
+        "js": ["script.js"]
+    }],
+    "web_accessible_resources": [{
+        "resources": ["/static/*"],
+        "matches": ["<all_urls>"]
+    }]
+}
